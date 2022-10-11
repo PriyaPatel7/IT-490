@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-$mydb = new mysqli('127.0.0.1','root','12345','testdb');
+$mydb = new mysqli('127.0.0.1','testUser','12345','testdb');
 
 if ($mydb->errno != 0)
 {
@@ -11,7 +11,7 @@ if ($mydb->errno != 0)
 
 echo "successfully connected to database".PHP_EOL;
 
-$query = "select * from students;";
+$query = "select * from testtable;";
 
 $response = $mydb->query($query);
 if ($mydb->errno != 0)
@@ -20,6 +20,16 @@ if ($mydb->errno != 0)
 	echo __FILE__.':'.__LINE__.":error: ".$mydb->error.PHP_EOL;
 	exit(0);
 }
+$numrows = mysqli_num_rows($response);
 
+echo "we got $numrows from the query".PHP_EOL;
+
+
+while ($row = $response -> fetch_row())
+{
+	print_r($row);
+}
+
+echo "test complete".PHP_EOL;
 
 ?>
