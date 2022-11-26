@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          color: black;
+        
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: #282828;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 50px;
+          justify-content: space-between;
+          margin-left: 120px;
+          margin-right: 60px;
+          font-family: 'Caveat', cursive;
+          
+        }
+        .topnav a:hover {
+            border-bottom: 3px solid #FFA500;
+                color: rgb(0, 0, 0);
+                }
+        .topnav .icon {
+          display: none;
+          text-align: center;
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+        }
+        h2{
+            text-align: center;
+            font-size: 40px;
+            color: #b47602;
+        }
+        table, td, tr{
+            border: 2px solid #FFA500;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        </style>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="topnav" id="nav_menu">
+  <a href="homepage.html" class="active">Home</a>
+  <a href="comparePrice.html">Compare Prices</a>
+  <a href="#">Status</a>
+  <a href="search.html">Search</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div style="padding-left:16px">
+  <h2>Did you take your medication today?</h2>
+
+<table>
+    <tr>
+        <td>
+            Medication name: 
+        </td>
+        <td>
+            Time
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Advil
+        </td>
+        <td>
+            4:00 pm
+        </td>
+    </tr>
+</table>
+
+<h2>
+  This website will help you to learn more about medications you are taking.  By using this website you will
+  have the chance to go more indepth about medicines, compare prices, and keep track of the medications you are using.
+  Have fun exploring the website!
+</h2>
+</div>
+</body>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("nav_menu");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+</html>

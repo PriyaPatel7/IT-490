@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          color: black;
+          background-image: url("wave\ \(1\).svg");
+          background-size: 800px 200px;
+        
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: #282828;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 50px;
+          justify-content: space-between;
+          margin-left: 120px;
+          margin-right: 60px;
+          font-family: 'Caveat', cursive;
+          
+        }
+        .topnav a:hover {
+            border-bottom: 3px solid #ff5e00;
+                color: rgb(0, 0, 0);
+                }
+        .topnav .icon {
+          display: none;
+          text-align: center;
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+        }
+        h2{
+            text-align: center;
+            font-size: 40px;
+            color: #b47602;
+        }
+        table, td, tr{
+            border: 4px solid #FFA500;
+            border-collapse: collapse;
+        }
+
+        html{
+       background-color: rgb(255, 255, 255);
+       width:100%;
+    }
+
+    form {
+        width: 350px;
+        position: relative;
+        margin: auto;
+}
+    form .form-field::before {
+    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    color: #888888;
+    content: " ";
+    display: block;
+    }
+    form .form-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    }
+    form input {
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    background-color:#ffffff;
+    /* border-radius: 4px red; */
+    border-radius: 25% 10%;
+    border: 6px solid #65031a;
+    display: block;
+    padding: 0.9rem 0.9rem;
+    box-shadow: 0px 3px 6px rgba(248, 248, 248, 0.468);
+    font-size: 17px;
+    color: #000000;
+    text-indent: 40px;
+    }
+    form .btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.9rem 2.5rem;
+    text-align: center;
+    background-color: #a94a0b;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+    }
+
+    #background{
+        border: 5px solid rgb(82, 4, 20);
+        margin-right: 400px;
+        margin-left: 400px;
+        box-shadow: 5px 10px #888888;
+    }
+    p{
+        text-align: center;
+    }
+
+        </style>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+      
+
+        <div class="topnav" id="nav_menu">
+         
+            <a href="homepage.html" class="active">Home</a>
+            <a href="comparePrice.html">Compare Prices</a>
+            <a href="#">Status</a>
+            <a href="search.html">Search</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+       
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <h2>Let's Compare the prices here!</h2>
+       <br>
+       <br>
+    
+        <form action= "php/login_mq.php" class="login" method="post">
+            <div class="form-field">
+                <input type="medicatonName" placeholder="Medication" name="medication" required/>
+            </div>
+        
+            <div class="form-field">
+                <input type="zipCode" placeholder="Zip Code" name="zipCode" required/> 
+            </div>
+        
+            <div class="form-field">
+                <button class="btn" type="submit" name = "compare">Compare Price</button>
+            </div>
+         
+        </div>
+            </form>
+            <br>
+            <br>
+            <br>
+       
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,160L17.1,133.3C34.3,107,69,53,103,32C137.1,11,
+            171,21,206,37.3C240,53,274,75,309,80C342.9,85,377,75,411,90.7C445.7,107,480,149,514,181.3C548.6,213,583,235,617,229.3C651.4,224,686,
+            192,720,197.3C754.3,203,789,245,823,240C857.1,235,891,181,926,133.3C960,85,994,43,1029,32C1062.9,21,1097,43,1131,74.7C1165.7,107,1200,
+            149,1234,170.7C1268.6,192,1303,192,1337,186.7C1371.4,181,1406,171,1423,165.3L1440,160L1440,320L1422.9,320C1405.7,320,1371,320,1337,
+            320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,
+            320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,
+            320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"></path></svg>
+
+
+    </body>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("nav_menu");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<style>
+      html{
+       background-color: rgb(255, 255, 255);
+       width:100%;
+    }
+
+    form {
+        width: 350px;
+        position: relative;
+        margin: auto;
+}
+    form .form-field::before {
+    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    color: #888888;
+    content: " ";
+    display: block;
+    }
+    form .form-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    }
+    form input {
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    background-color:#ffffff;
+    /* border-radius: 4px red; */
+    border-radius: 25% 10%;
+    border: 6px solid #65031a;
+    display: block;
+    padding: 0.9rem 0.9rem;
+    box-shadow: 0px 3px 6px rgba(248, 248, 248, 0.468);
+    font-size: 17px;
+    color: #000000;
+    text-indent: 40px;
+    }
+    form .btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.9rem 2.5rem;
+    text-align: center;
+    background-color: #a94a0b;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+    }
+    h1{
+        font-size: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        z-index: 1;;
+        text-align: center;
+        color:rgb(44, 2, 10);
+        }
+
+    #background{
+        border: 5px solid rgb(82, 4, 20);
+        margin-right: 400px;
+        margin-left: 400px;
+        box-shadow: 5px 10px #888888;
+    }
+    p{
+        text-align: center;
+    }
+</style>
+<html>   
+<head>  
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <title> Login Page </title>  
+        <!-- <link rel="stylesheet" href="./style.css"></link> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>
+        Where is your medicine?
+    </h1>
+
+    <div id="background">
+        <br>
+        <br>
+        <br>
+        <br>
+      <form action= "php/login_mq.php" class="login" method="post">
+    <div class="form-field">
+        <input type="username" placeholder="Username" name="username" required/>
+    </div>
+
+    <div class="form-field">
+        <input type="password" placeholder="Password" name="password" required/> 
+    </div>
+
+    <div class="form-field">
+        <button class="btn" type="submit" name = "login">Log in</button>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+    <p> Create a new account
+        <a href="signup.html">Signup</a>
+    </p>
+    </form>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,256L40,240C80,224,160,192,240,165.3C320,139,400,
+        117,480,112C560,107,640,117,720,138.7C800,160,880,192,960,170.7C1040,149,1120,75,1200,58.7C1280,
+        43,1360,85,1400,106.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,
+        320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+   
+</body>
+</html>
