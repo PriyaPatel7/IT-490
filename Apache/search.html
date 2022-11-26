@@ -1,26 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <!-- <php>
 
-        $client = new rabbitMQClient("testRabbitMQ.ini","speak");
-        $song = array($songsInfo);
-
-        $songList = $_POST['song'];
-
-        $request = array();
-        $request['type'] = "songRequest";
-
-        $request['songs'] = $songList;
-
-        $request['songTitle'] = $songList;
-        $request['albumArt'] = $songList;
-        $request['artistName'] = $songList;
-
-        $response = $client->send_request($request);
-        print_r($response);
-
-        ?>
-    </php> -->
     <style>
         html{
             background-color:rgb(255, 255, 255);
@@ -170,107 +150,16 @@
               <i class="fa fa-bars"></i>
             </a>
           </div>
-        <!-- <h1>
-            This is a mockup for the search page.
-        </h1> -->
+      
         <div class="searchBar">
             <form action= "search.php" class="search" method="post">
                 <input type="text" placeholder="Search here" name="searching">
                 <button type="submit" class="searchbtn"><span class="mglass">&#9906;</span></button>
             </form>
         </div>
-        <!-- <ul>
-            <li id="songTitle">
-                Unholy
-            </li>
-            <li id="albumArt">
-                <img src="Unholy1.jpg">
-            </li>
-            <li id="artistName">
-               <p>Sam Smith ft. Kim Petras</p> 
-            </li> -->
-
-            <!-- <php>
-
-                while($row = $client($songList)){
-                    <li><php? echo $rows.['songTitle' ]; $?></php></li>
-                    <li><php? echo $rows.['albumArt' ]; $?></php></li>
-                    <li><php? echo $rows.['artistName' ]; $?></php></li>
-                }
-                ?>
-            </php>
-
-        </ul>
-        <button style="font-size:24px" class="addbtn"><i class="fa fa-plus"></i></button> -->
-        <!-- <img src="data:image/jpeg;base64,<?php echo base64_encode( $image_data ); ?>"/> -->
-        <!-- <p>Unholy</p>
-        <img src="Unholy1.jpg">
-        <p>Unholy</p>
-        <p>Sam Smith ft. Kim Petras </p> -->
-
-    
-    </body>
-    <!-- // <PHP code to get song data from database, save to an array variable>
-
-        // <JS code to loop through the above array variable if it is defined, then display for each song:
-        //     - Album art
-        //     - Title
-        //     - Artist name
-        //     - Button to add to the playlist, which leads to the ADD TO PLAYLIST page upon click, passing the ID of the song and the current page.
-        // >
-        
-        
-        // ON ADD TO PLAYLIST PAGE:
-        
-        // <PHP code (Requiring two variables with GET, for the requested SongID and page to redirect to afterward) to:
-        //     - Send a request to the DB with the SongID to add, as well as the SessionID.
-        //     - Redirect to the previous page
-        // > -->
 
 
     <script>
-
-        songRequest
-
-        fetch('search.php')
-            .then(res =>{
-                    returnres.json()
-            }
-            )
-            .then(data=>{
-                data.array.forEach(search => {
-                    const markUp = `<li>${song.artist}</li>`;
-                    document.querySelector('ul').insertAdjacentHTML('beforeend', markUp);
-                });
-            })
-
-            function displayInfo(){
-                const songTitle = data.songs[1];
-                const titleDiv = document.getElementById("songTitle"); 
-
-                const songPic = data.songs[3];
-                const PicDiv = document.getElementById("albumArt"); 
-
-                const songArtist = data.songs[4];
-                const artistDiv = document.getElementById("artistName"); 
-
-                const songName = name.strsongName;
-                const heading = document.createElement("h2");
-                heading.innerHTML = songName;
-                titleDiv.appendChild(heading);
-
-
-                const songImg = pic.strsongPic;
-                const image= document.createElement("img");
-                image.innerHTML = songImg;
-                PicDiv.appendChild(image);
-
-                const songArt = artist.strsongArtist;
-                const artist= document.createElement("h2");
-                artist.innerHTML = songArt;
-                artistDiv.appendChild(artist);
-
-            }
 
     function myFunction() {
       var x = document.getElementById("nav_menu");
