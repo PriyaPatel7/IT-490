@@ -1,0 +1,15 @@
+[Unit]
+Description=Main project service
+StartLimitBurst=3
+StartLimitIntervalSec=60
+OnFailure=error_handler.service
+
+[Service]
+User=kimia
+WorkingDirectory=/etc/systemd/system
+ExecStart= /usr/bin/python3 ./projserv.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
