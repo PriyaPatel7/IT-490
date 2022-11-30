@@ -1,0 +1,11 @@
+[Unit]
+Description=Error handling service 
+
+[Service]
+Type=oneshot
+User=kimia
+WorkingDirectory=/etc/systemd/system
+ExecStart=/usr/bin/python3 ./handelingError.py
+
+[Install]
+WantedBy=multi-user.target
