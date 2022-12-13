@@ -86,7 +86,7 @@
 	</HEAD>
 	<BODY>
                 <center> <h1>Sign Up</h1> </center>
-                <form action="php/add_user_mq.php" method="post">
+                <form action="add_user_mq.php" method="post">
                 </span>
                     <div class="container">
 	                <input type="hidden" id="type" name="type" value="add_user">
@@ -98,11 +98,18 @@
 
 			<label for="email-id">Email:</label> <br/>
 			<input type="email" name="email" id="email-id" /> <br/>
+			<label for="email-id">Phone Number:</label> <br/>
+			<input type="phoneNumber" name="phoneNumber" id="phone-id" /> <br/>
+			<label for="email-id">Phone Carrier:</label> <br/>
+			<input type="phoneCarrier" name="phoneCarrier" id="phone-carrier" /> <br/>
+			
+			
                 <button type="submit" class="btn">Signup</button>
 		    </div>
+		
 		</form>
                 <p> Already have an account
-                   <a href="./login.html">Login</a>
+                   <a href="index.html">Login</a>
                 </p>
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,256L40,240C80,224,160,192,240,165.3C320,139,400,
@@ -110,4 +117,5 @@
                 43,1360,85,1400,106.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,
                 320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
 	</BODY>
+	
 </HTML>
